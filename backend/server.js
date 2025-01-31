@@ -31,6 +31,8 @@ app.use('/api/user', userRouter)
 app.use('/api/data', dataRouter)
 
 // server listening
-app.listen(port, () => {
-  console.log(`App listening on port ${port}`)
-})
+// app.listen(port, () => {
+//   console.log(`App listening on port ${port}`)
+// })
+
+export default app;
