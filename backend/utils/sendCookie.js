@@ -6,8 +6,10 @@ const sendCookie = (res, user, message, statusCode = 200) => {
 
     res.status(statusCode)
     .cookie('crudToken', token, {
-        httpOnly : true,
-        maxAge : 15 * 24 * 60 * 60 * 1000,
+        httpOnly: true,
+        secure: true, // Required for HTTPS
+        sameSite: 'None', // Required for cross-site cookies
+        maxAge: 15 * 24 * 60 * 60 * 1000,
     })
     .json({
         success : true,
