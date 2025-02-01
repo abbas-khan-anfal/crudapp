@@ -2,7 +2,8 @@ import mongoose from 'mongoose';
 import dataModel from '../models/Data.js'
 import path from 'path'
 import deleteFileHandler from '../utils/deleteFile.js'
-import { v2 as cloudinary } from 'cloudinary';
+import pkg from 'cloudinary';
+const { v2: cloudinary } = pkg;
 
 // function to add data in db
 const addData = async (req, res, next) => {
