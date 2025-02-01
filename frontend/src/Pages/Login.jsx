@@ -20,7 +20,8 @@ const Login = () => {
 			const response = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/api/user/login`, userObj, {
 				headers : {
 					'Content-Type': 'application/json',
-				}
+				},
+				withCredentials : true
 			});
 			toast.success(response.data.message);
 			setEmail("");

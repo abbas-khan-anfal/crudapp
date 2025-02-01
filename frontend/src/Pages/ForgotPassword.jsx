@@ -15,7 +15,8 @@ const ForgotPassword = () => {
 			const response = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/api/user/forgotpassword`, {email}, {
 				headers : {
 					'Content-Type': 'application/json',
-				}
+				},
+				withCredentials : true
 			});
 			toast.success(response.data.message);
 			console.log(response);

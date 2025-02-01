@@ -19,7 +19,8 @@ const Signup = () => {
 			const response = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/api/user/signup`, userObj, {
 				headers : {
 					'Content-Type': 'application/json',
-				}
+				},
+				withCredentials : true
 			});
 			toast.success(response.data.message);
 			setUsername("");

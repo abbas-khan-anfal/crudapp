@@ -14,7 +14,9 @@ const VerifyEmail = () => {
 		setLoading(true);
 		try
 		{	
-			const response = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/user/verifyemail?token=${isToken}`);
+			const response = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/user/verifyemail?token=${isToken}`, {
+				withCredentials : true
+			});
             console.log(response);
         }
         catch(error)
