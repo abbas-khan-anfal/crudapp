@@ -10,9 +10,7 @@ const StoreProvider = ({ children }) => {
     const isAuthenticated = async () => {
 		try
 		{
-			const response = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/user/getuser`, {
-				withCredentials : true
-			});
+			const response = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/user/getuser`);
             setUserState(true);
 		}
 		catch(error)
