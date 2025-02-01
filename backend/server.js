@@ -16,7 +16,7 @@ connectDB()
 app.use(express.json())
 app.use(cookieParser())
 app.use(cors({
-    origin : 'https://crudbackend-five.vercel.app',
+    origin : '*',
     methods : ['PUT', 'GET', 'DELETE', 'POST'],
     credentials : true
 }))
