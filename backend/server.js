@@ -16,7 +16,7 @@ connectDB()
 app.use(express.json())
 app.use(cookieParser())
 app.use(cors({
-    origin : [process.env.FRONTEND_URL],
+    origin : 'https://crudfrontend-sandy.vercel.app',
     methods : ['PUT', 'GET', 'DELETE', 'POST'],
     credentials : true
 }))
