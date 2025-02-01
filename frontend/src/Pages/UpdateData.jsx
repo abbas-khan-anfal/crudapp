@@ -47,9 +47,7 @@ const UpdateData = () => {
 		setLoading(true);
 		try
 		{	
-			const response = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/data/showupdatedate?d_id=${id}`, {
-				withCredentials : true
-			});
+			const response = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/data/showupdatedate?d_id=${id}`);
 			setTitle(response.data.data.title);
 			setImgs(response.data.data.imgs);
 		}

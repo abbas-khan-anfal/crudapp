@@ -23,9 +23,7 @@ const StoreProvider = ({ children }) => {
     const logoutHandler = async () => {
 		try
 		{
-			const response = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/user/logout`, {
-				withCredentials : true
-			});
+			const response = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/user/logout`);
             setUserState(false);
 		}
 		catch(error)

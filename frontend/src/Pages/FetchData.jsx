@@ -14,9 +14,7 @@ const FetchData = () => {
 		setLoading(true);
 		try
 		{	
-			const response = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/data/fetch?page=${page}`, {
-				withCredentials : true
-			});
+			const response = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/data/fetch?page=${page}`);
 			setDatas(response.data.data);
       setCurrentPage(response.data.currentPage);
       setTotalPages(response.data.totalPages);
@@ -35,9 +33,7 @@ const FetchData = () => {
 		setLoading(true);
       try
       {	
-        const response = await axios.delete(`${process.env.REACT_APP_BACKEND_URL}/api/data/delete?d_id=${id}`, {
-          withCredentials : true
-        });
+        const response = await axios.delete(`${process.env.REACT_APP_BACKEND_URL}/api/data/delete?d_id=${id}`);
         fetchData(currentPage);
       }
       catch(error)
